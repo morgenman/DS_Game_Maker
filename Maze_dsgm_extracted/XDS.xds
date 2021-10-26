@@ -1,0 +1,242 @@
+ROOM Level_1,256,192,1,Top_Screen_BG,256,192,1,Bottom_Screen_BG
+BOOTROOM How_To_Play_Room
+SCORE 0
+LIVES 3
+HEALTH 100
+PROJECTNAME Maze Game
+TEXT2 DSGM Example
+TEXT3 By James Garner
+FAT_CALL 0
+NITROFS_CALL 1
+MIDPOINT_COLLISIONS 0
+INCLUDE_WIFI_LIB 0
+SPRITE Block_Sprite,16,16
+OBJECT Block,Block_Sprite,0
+OBJECT Player,Player_Sprite,0
+SPRITE Player_Sprite,32,32
+SPRITE Next_Level_Sprite,16,16
+OBJECT Next_Level,Next_Level_Sprite,0
+SPRITE Pickup_Sprite,16,16
+OBJECT Pickup,Pickup_Sprite,0
+ROOM Level_2,256,192,1,Top_Screen_BG,256,192,1,Bottom_Screen_BG
+ROOM Level_3,256,192,1,Top_Screen_BG,256,192,1,Bottom_Screen_BG
+SPRITE Baddie_Sprite,16,16
+OBJECT Baddie,Baddie_Sprite,0
+ROOM Win_Room,256,192,1,Top_Screen_BG,256,192,1,Bottom_Screen_BG
+OBJECT Win_Controller,None,0
+BACKGROUND Top_Screen_BG
+BACKGROUND Bottom_Screen_BG
+OBJECTPLOT Win_Controller,Win_Room,0,16,8
+EVENT Win_Controller,7,NoData
+EVENT Win_Controller,2,A
+ACT Win_Controller,2,A,Go to Room,Level_1,this
+ACT Win_Controller,7,NoData,Output Text,0;1;1;You win!,this
+ACT Win_Controller,7,NoData,Output Text,0;1;3;Press A to play again,this
+EVENT Pickup,6,Player
+ACT Pickup,6,Player,Delete Object,,this
+ROOM How_To_Play_Room,256,192,1,,256,192,1,Bottom_Screen_BG
+OBJECT How_To_Play_Controller,None,0
+OBJECTPLOT How_To_Play_Controller,How_To_Play_Room,0,16,16
+EVENT How_To_Play_Controller,1,NoData
+EVENT How_To_Play_Controller,2,A
+ACT How_To_Play_Controller,2,A,Go to Room,Level_1,this
+ACT How_To_Play_Controller,1,NoData,Output Text,0;1;1;This is a Simple Game,this
+ACT How_To_Play_Controller,1,NoData,Output Text,0;1;3;Green is Good,this
+ACT How_To_Play_Controller,1,NoData,Output Text,0;1;5;Red is Bad,this
+ACT How_To_Play_Controller,1,NoData,Output Text,0;1;7;Use the D-Pad,this
+ACT How_To_Play_Controller,1,NoData,Output Text,0;1;9;Press A to Start,this
+OBJECTPLOT Block,Level_1,0,0,0
+OBJECTPLOT Block,Level_1,0,0,16
+OBJECTPLOT Block,Level_1,0,0,32
+OBJECTPLOT Block,Level_1,0,0,48
+OBJECTPLOT Block,Level_1,0,0,64
+OBJECTPLOT Block,Level_1,0,0,80
+OBJECTPLOT Block,Level_1,0,0,96
+OBJECTPLOT Block,Level_1,0,0,112
+OBJECTPLOT Block,Level_1,0,0,128
+OBJECTPLOT Block,Level_1,0,0,144
+OBJECTPLOT Block,Level_1,0,0,160
+OBJECTPLOT Block,Level_1,0,0,176
+OBJECTPLOT Block,Level_1,0,16,176
+OBJECTPLOT Block,Level_1,0,32,176
+OBJECTPLOT Block,Level_1,0,48,176
+OBJECTPLOT Block,Level_1,0,64,176
+OBJECTPLOT Block,Level_1,0,80,176
+OBJECTPLOT Block,Level_1,0,96,176
+OBJECTPLOT Block,Level_1,0,112,176
+OBJECTPLOT Block,Level_1,0,128,176
+OBJECTPLOT Block,Level_1,0,144,176
+OBJECTPLOT Block,Level_1,0,160,176
+OBJECTPLOT Block,Level_1,0,176,176
+OBJECTPLOT Block,Level_1,0,192,176
+OBJECTPLOT Block,Level_1,0,208,176
+OBJECTPLOT Block,Level_1,0,224,176
+OBJECTPLOT Block,Level_1,0,240,176
+OBJECTPLOT Block,Level_1,0,240,160
+OBJECTPLOT Block,Level_1,0,240,144
+OBJECTPLOT Block,Level_1,0,240,128
+OBJECTPLOT Block,Level_1,0,240,48
+OBJECTPLOT Block,Level_1,0,240,32
+OBJECTPLOT Block,Level_1,0,240,16
+OBJECTPLOT Block,Level_1,0,240,0
+OBJECTPLOT Block,Level_1,0,224,0
+OBJECTPLOT Block,Level_1,0,208,0
+OBJECTPLOT Block,Level_1,0,192,0
+OBJECTPLOT Block,Level_1,0,176,0
+OBJECTPLOT Block,Level_1,0,160,0
+OBJECTPLOT Block,Level_1,0,144,0
+OBJECTPLOT Block,Level_1,0,128,0
+OBJECTPLOT Block,Level_1,0,112,0
+OBJECTPLOT Block,Level_1,0,96,0
+OBJECTPLOT Block,Level_1,0,80,0
+OBJECTPLOT Block,Level_1,0,64,0
+OBJECTPLOT Block,Level_1,0,48,0
+OBJECTPLOT Block,Level_1,0,32,0
+OBJECTPLOT Block,Level_1,0,16,0
+OBJECTPLOT Block,Level_1,0,96,64
+OBJECTPLOT Block,Level_1,0,96,80
+OBJECTPLOT Block,Level_1,0,96,96
+OBJECTPLOT Block,Level_1,0,96,112
+OBJECTPLOT Block,Level_1,0,112,64
+OBJECTPLOT Block,Level_1,0,128,64
+OBJECTPLOT Block,Level_1,0,144,64
+OBJECTPLOT Block,Level_1,0,144,80
+OBJECTPLOT Block,Level_1,0,144,96
+OBJECTPLOT Block,Level_1,0,144,112
+OBJECTPLOT Block,Level_1,0,128,112
+OBJECTPLOT Block,Level_1,0,112,112
+OBJECTPLOT Pickup,Level_1,0,48,32
+OBJECTPLOT Pickup,Level_1,0,128,144
+OBJECTPLOT Pickup,Level_1,0,192,80
+OBJECTPLOT Baddie,Level_1,0,32,24
+OBJECTPLOT Baddie,Level_1,0,208,152
+OBJECTPLOT Baddie,Level_1,0,160,136
+OBJECTPLOT Player,Level_1,0,40,80
+OBJECTPLOT Next_Level,Level_1,0,240,88
+OBJECTPLOT Block,Level_2,0,0,16
+OBJECTPLOT Block,Level_2,0,0,0
+OBJECTPLOT Block,Level_2,0,16,0
+OBJECTPLOT Block,Level_2,0,32,0
+OBJECTPLOT Block,Level_2,0,48,0
+OBJECTPLOT Block,Level_2,0,64,0
+OBJECTPLOT Block,Level_2,0,60,32
+OBJECTPLOT Block,Level_2,0,60,48
+OBJECTPLOT Block,Level_2,0,60,64
+OBJECTPLOT Block,Level_2,0,60,80
+OBJECTPLOT Block,Level_2,0,0,112
+OBJECTPLOT Block,Level_2,0,0,128
+OBJECTPLOT Block,Level_2,0,0,144
+OBJECTPLOT Block,Level_2,0,0,160
+OBJECTPLOT Block,Level_2,0,16,160
+OBJECTPLOT Block,Level_2,0,32,160
+OBJECTPLOT Block,Level_2,0,48,160
+OBJECTPLOT Block,Level_2,0,64,160
+OBJECTPLOT Block,Level_2,0,80,160
+OBJECTPLOT Block,Level_2,0,96,160
+OBJECTPLOT Block,Level_2,0,112,160
+OBJECTPLOT Block,Level_2,0,128,160
+OBJECTPLOT Block,Level_2,0,128,144
+OBJECTPLOT Block,Level_2,0,128,128
+OBJECTPLOT Block,Level_2,0,128,112
+OBJECTPLOT Block,Level_2,0,128,96
+OBJECTPLOT Block,Level_2,0,80,0
+OBJECTPLOT Block,Level_2,0,96,0
+OBJECTPLOT Block,Level_2,0,112,0
+OBJECTPLOT Block,Level_2,0,128,0
+OBJECTPLOT Block,Level_2,0,144,0
+OBJECTPLOT Block,Level_2,0,160,0
+OBJECTPLOT Block,Level_2,0,176,0
+OBJECTPLOT Block,Level_2,0,192,0
+OBJECTPLOT Block,Level_2,0,192,16
+OBJECTPLOT Block,Level_2,0,192,32
+OBJECTPLOT Block,Level_2,0,192,48
+OBJECTPLOT Block,Level_2,0,192,64
+OBJECTPLOT Block,Level_2,0,192,80
+OBJECTPLOT Block,Level_2,0,192,144
+OBJECTPLOT Block,Level_2,0,192,160
+OBJECTPLOT Block,Level_2,0,176,160
+OBJECTPLOT Block,Level_2,0,160,160
+OBJECTPLOT Block,Level_2,0,144,160
+OBJECTPLOT Pickup,Level_2,0,88,32
+OBJECTPLOT Pickup,Level_2,0,160,32
+OBJECTPLOT Block,Level_2,0,128,80
+OBJECTPLOT Block,Level_2,0,128,64
+OBJECTPLOT Block,Level_2,0,0,96
+OBJECTPLOT Block,Level_2,0,0,80
+OBJECTPLOT Block,Level_2,0,0,32
+OBJECTPLOT Block,Level_2,0,0,48
+OBJECTPLOT Block,Level_2,0,0,64
+OBJECTPLOT Block,Level_2,0,60,16
+OBJECTPLOT Player,Level_2,0,22,24
+OBJECTPLOT Pickup,Level_2,0,24,144
+OBJECTPLOT Pickup,Level_2,0,104,144
+OBJECTPLOT Baddie,Level_2,0,64,136
+OBJECTPLOT Next_Level,Level_2,0,192,112
+OBJECTPLOT Player,Level_3,0,24,8
+OBJECTPLOT Pickup,Level_3,0,32,128
+OBJECTPLOT Pickup,Level_3,0,64,96
+OBJECTPLOT Pickup,Level_3,0,128,32
+OBJECTPLOT Pickup,Level_3,0,160,128
+OBJECTPLOT Pickup,Level_3,0,160,0
+OBJECTPLOT Pickup,Level_3,0,64,32
+OBJECTPLOT Pickup,Level_3,0,192,160
+OBJECTPLOT Block,Level_3,0,240,64
+OBJECTPLOT Block,Level_3,0,0,160
+OBJECTPLOT Block,Level_3,0,0,112
+OBJECTPLOT Block,Level_3,0,0,64
+OBJECTPLOT Block,Level_3,0,0,16
+OBJECTPLOT Block,Level_3,0,240,16
+OBJECTPLOT Block,Level_3,0,240,112
+OBJECTPLOT Block,Level_3,0,240,160
+OBJECTPLOT Baddie,Level_3,0,64,16
+OBJECTPLOT Baddie,Level_3,0,96,64
+OBJECTPLOT Baddie,Level_3,0,128,112
+OBJECTPLOT Baddie,Level_3,0,160,160
+OBJECTPLOT Pickup,Level_3,0,64,160
+OBJECTPLOT Pickup,Level_3,0,224,128
+OBJECTPLOT Next_Level,Level_3,0,224,88
+EVENT Player,3,Down
+EVENT Player,3,Up
+EVENT Player,3,Right
+EVENT Player,3,Left
+EVENT Player,6,Next_Level
+EVENT Player,6,Baddie
+ACT Player,3,Down,If,!Object_Under_H_Line(Bottom_Screen<com> [X]<com> [X] + [Width]<com> [Y] + [Height]<com> Block),this
+ACT Player,3,Down,Start Block,,this
+ACT Player,3,Down,Set Object Position,[X];[Y] + 1,this
+ACT Player,3,Down,End Block,,this
+ACT Player,3,Up,If,!Object_Under_H_Line(Bottom_Screen<com> [X]<com> [X] + [Width]<com> [Y]<com> Block),this
+ACT Player,3,Up,Start Block,,this
+ACT Player,3,Up,Set Object Position,[X];[Y] - 1,this
+ACT Player,3,Up,End Block,,this
+ACT Player,3,Right,If,!Object_Under_V_Line(Bottom_Screen<com> [Y]<com> [Y] + [Height]<com> [X] + [Width]<com> Block),this
+ACT Player,3,Right,Start Block,,this
+ACT Player,3,Right,Set Object Position,[X] + 1;[Y],this
+ACT Player,3,Right,End Block,,this
+ACT Player,3,Left,If,!Object_Under_V_Line(Bottom_Screen<com> [Y]<com> [Y] + [Height]<com> [X]<com> Block),this
+ACT Player,3,Left,Start Block,,this
+ACT Player,3,Left,Set Object Position,[X] - 1;[Y],this
+ACT Player,3,Left,End Block,,this
+ACT Player,6,Next_Level,If Object Instances,Pickup;0,this
+ACT Player,6,Next_Level,Start Block,,this
+ACT Player,6,Next_Level,If Current Room,Level_3,this
+ACT Player,6,Next_Level,Start Block,,this
+ACT Player,6,Next_Level,Go to Room,Win_Room,this
+ACT Player,6,Next_Level,End Block,,this
+ACT Player,6,Next_Level,Else,,this
+ACT Player,6,Next_Level,Start Block,,this
+ACT Player,6,Next_Level,Go to Next Room,,this
+ACT Player,6,Next_Level,End Block,,this
+ACT Player,6,Next_Level,End Block,,this
+ACT Player,6,Baddie,Set Object Position,[OriginalX];[OriginalY],this
+EVENT Baddie,1,NoData
+EVENT Baddie,7,NoData
+ACT Baddie,1,NoData,Set Variable,[VX];1,this
+ACT Baddie,7,NoData,If,Object_Under_Point(Bottom_Screen<com> [X] + [Width] + 1<com> [Y]<com> Block),this
+ACT Baddie,7,NoData,Start Block,,this
+ACT Baddie,7,NoData,Set Variable,[VX];-1,this
+ACT Baddie,7,NoData,End Block,,this
+ACT Baddie,7,NoData,If,Object_Under_Point(Bottom_Screen<com> [X] - 1<com> [Y]<com> Block),this
+ACT Baddie,7,NoData,Start Block,,this
+ACT Baddie,7,NoData,Set Variable,[VX];1,this
+ACT Baddie,7,NoData,End Block,,this
