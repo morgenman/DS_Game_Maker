@@ -1,0 +1,23 @@
+TYPE 3
+DISPLAY Draw !1! strings, pausing for a
+ICON StringDraw.png
+CONDITION 0
+ARG number of strings,12
+ARG StringArray,12
+int num = !1!;
+char strings[!1!][36]=!2!;
+PA_LoadBackground(1, 2, &TopWithMessage);
+bool ff=false;
+bool done = false;
+int i;
+for(i = 0;i<num;i++){
+	if(!ff) Draw_Text(1, 3, 20, strings[i]);
+	else Draw_Text(1, 3, 22, strings[i]);
+	done = false;
+	while (!done) {scanKeys();int keys = keysDown(); if (keys & KEY_A) {done = true;}} // wait for a
+	if (ff) PA_ClearTextBg(1);
+	ff = !ff;
+
+}
+PA_ClearTextBg(1);
+PA_LoadBackground(1, 2, &TopNoMessage);
