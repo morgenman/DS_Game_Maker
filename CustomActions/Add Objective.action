@@ -1,0 +1,6 @@
+TYPE 5
+DISPLAY Add "!1!" to list
+ICON Empty.png
+CONDITION 0
+ARG Text,12
+addListItem("!1!", 1);

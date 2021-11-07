@@ -1,0 +1,5 @@
+TYPE 5
+DISPLAY Runs startupScript()
+ICON Empty.png
+CONDITION 0
+startupScript();
