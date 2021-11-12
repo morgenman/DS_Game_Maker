@@ -60,7 +60,7 @@ HELLO MY DUDES
 ### C++ Example
 The following image may help you understand:
 
-<img src='.ReadMeAssets/cpp1.png' width='400'> \
+<img src='.ReadMeAssets/cpp1.png' href=".ReadMeAssets/cpp1.png" target="new">
 
 The green arrow shows how DSGM automatically pulls the `MyWrapper.h`\
 The blue double box shows the implementation using C++ functions\
