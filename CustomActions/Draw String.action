@@ -4,24 +4,40 @@ ICON StringDraw.png
 CONDITION 0
 ARG number of strings,12
 ARG StringArray,12
+
 int num = !1!;
 char strings[!1!][36]=!2!;
 PA_LoadBackground(1, 2, &TopWithMessage);
+//char text[200];
+//PA_LoadDefaultText(1, 0);
 bool ff=false;
 bool done = false;
 int i;
+u32 nletters;
+u32 letter;
 for(i = 0;i<num;i++){
-	if(!ff) Draw_Text(1, 3, 20, strings[i]);// arguments of drawtext: screen #, x pos, y pos, char* to print
-	else Draw_Text(1, 3, 22, strings[i]);
+	nletters = 0; // Number of letter to output...
+	letter = 0; // Current letter written...
+	
+	while (letter == nletters){ // Do this until the function outputs all the text
+		++nletters; // Next frame, one more letter...	
+		// This text function outputs a given number of letters... This way, it can do as if you were typing !
+		if(!ff) letter = PA_BoxText(1, 2,20,30, 25, strings[i], nletters);
+		else letter = PA_BoxText(1, 2,22,30, 25, strings[i], nletters);
+		PA_WaitForVBL(); // You can set more WaitForVBL if you want to slow down the text output...
+	}
+	//if(!ff) Draw_Text(1, 3, 20, strings[i]);// arguments of drawtext: screen #, x pos, y pos, char* to print
+	//else Draw_Text(1, 3, 22, strings[i]);
 	done = false;
 	while (!done) {scanKeys();int keys = keysDown(); if (keys & KEY_A) {done = true;}} // wait for a
 	if (ff) {
 		PA_ClearTextBg(1);
-		updateTopScreen();
+		//updateTopScreen(false);
 
 	}
 	ff = !ff;
 }
 PA_ClearTextBg(1);
-PA_LoadBackground(1, 2, &TopNoMessage);
-updateTopScreen();
+if(map)PA_LoadBackground(1, 2, &TopTransp);
+else PA_LoadBackground(1, 2, &TopNoMessage);
+updateTopScreen(false);

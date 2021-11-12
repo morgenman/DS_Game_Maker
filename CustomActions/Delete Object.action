@@ -1,0 +1,9 @@
+TYPE 0
+DISPLAY Delete Object
+ICON ObjectDelete.png
+CONDITION 0
+int x,y;
+x = Get_X(AppliesTo);
+y = Get_Y(AppliesTo);
+Delete_Instance(AppliesTo);
+redraw(x, y, scale, padding, 16);

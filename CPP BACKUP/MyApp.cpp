@@ -19,7 +19,7 @@ char* MyApp::stringTest() {
   str[0] = char1;
   str[1] = char2;
   str[2] = '\0';
-
+  
   return str;
 }
 
