@@ -60,7 +60,7 @@ HELLO MY DUDES
 ### C++ Example
 The following image may help you understand:
 
-<a href="DS_Game_Maker_Project/.ReadMeAssets/cpp1.png" target="_blank">
+<a href="raw/branch/master/DS_Game_Maker_Project/.ReadMeAssets/cpp1.png" target="_blank">
 <img src='.ReadMeAssets/cpp1.png'>
 </a>
 
@@ -109,7 +109,7 @@ You define the x and y size of each tile (in pixels) for the level, then refer t
 ## DSGM to C/C++
 This image is your reference for how DSGM compiles to code. 
 
-<a href="DS_Game_Maker_Project/.ReadMeAssets/dsgmCode.png" target="_blank">
+<a href="raw/branch/master/DS_Game_Maker_Project/.ReadMeAssets/dsgmCode.png" target="_blank">
 <img src='.ReadMeAssets/dsgmCode.png'>
 </a>
 
@@ -123,12 +123,12 @@ This code creates a dynamic "To Do list" which will be used for player objective
 This is probably most helpful for understanding structs and global variables 
 ### Backend
 
-<a href="DS_Game_Maker_Project/.ReadMeAssets/list2.png" target="_blank">
+<a href="raw/branch/master/DS_Game_Maker_Project/.ReadMeAssets/list2.png" target="_blank">
 <img src='.ReadMeAssets/list2.png'>
 </a>
 
 ### Using the ToDo List
 
-<a href="DS_Game_Maker_Project/.ReadMeAssets/list.png" target="_blank">
+<a href="raw/branch/master/DS_Game_Maker_Project/.ReadMeAssets/list.png" target="_blank">
 <img src='.ReadMeAssets/list.png'>
 </a>
