@@ -4,7 +4,6 @@ ICON StringDraw.png
 CONDITION 0
 ARG number of strings,12
 ARG StringArray,12
-
 int num = !1!;
 char strings[!1!][36]=!2!;
 PA_LoadBackground(1, 2, &TopWithMessage);
