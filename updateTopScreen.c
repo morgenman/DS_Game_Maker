@@ -1,3 +1,10 @@
+/// FYI, this is a copy of the function updateTopScreen inside the project. I
+/// prefer to edit outside of the software since vscode handles formatting and
+/// all that. My workflow is edit, copy, paste.
+
+redraw(Get_X(playerID), Get_Y(playerID), scale, padding,
+       15);  // Redraw around player movement
+
 if (flip) {
   if (map) miniDeco();
   map = !map;
@@ -9,14 +16,11 @@ if (map) {
   int x, y = 0;
   scale = 50 * 10;  // Percent * 10
   padding = border + 15;
-  int spritesize;
+  int spritesize, altY;
   int i, j;
   int color;  // 0 = Background; 1 = White; 2 = Red; 3 = Green; 4 = Blue;
-
-  AppliesToCustom = playerID;
-  x = Get_X(AppliesToCustom);
-  y = Get_Y(AppliesToCustom);
-  redraw(x, y, scale, padding, 16);
+  bool odd = false;
+  bool grid = true;
 
   for (AppliesToCustom = 0; AppliesToCustom < 256; AppliesToCustom++) {
     if (Instances[AppliesToCustom].InUse) {
@@ -30,13 +34,14 @@ if (map) {
       y /= 1000;
       x += padding;
       y += padding;
+      altY = 0;
       // PA_Print(0, "%d|",x);
       color = 0;
       spritesize = 8;
       switch (Instances[AppliesToCustom].EName) {
         case (Block):
           color = 1;
-          // spritesize = 6;
+          // spritesize = 4;
           break;
         case (Pickup):
           color = 3;
@@ -48,8 +53,10 @@ if (map) {
         case (Player):
           playerID = AppliesToCustom;
           color = 4;
-          y += 2;
-          spritesize = 6;
+          y += 4;
+          x += 4;
+          // spritesize = 10;
+          altY = 12;
           break;
         case (Next_Level):
           color = 5;
@@ -57,16 +64,19 @@ if (map) {
         default:
           continue;
       }
+      if (altY == 0) altY = spritesize;
       if (color != 0) {
         for (i = 0; i < spritesize; i++) {
-          for (j = 0; j < spritesize; j++) {
-            PA_Put8bitPixel(1, x + i, y + j, color);
+          for (j = 0; j < altY; j++) {
+            if (odd | !grid) PA_Put8bitPixel(1, x + i, y + j, color);
+            odd = !odd;
           }
+          odd = !odd;
         }
       }
     }
   }
-  miniDeco();
+  // miniDeco(); //Might not be necessary
 } else {
   PA_LoadBackground(1, 2, &TopNoMessage);
   int i;
