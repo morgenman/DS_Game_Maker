@@ -11,7 +11,7 @@
 ## Working on C++
 Make sure to edit C++ code in the git repository, and copy the updated files to the source folder when you actually build. \
 The exception to this is MyWrapper.h
-When changed, you need to reimport it. See the other C++ section below for how that works.\
+When changed, you need to reimport it. See the other C++ section below for how that works.
 
 ## Custom Actions
 Actions are a great way of making it easy for non-CodeMonkeys to use our code!\
@@ -22,7 +22,7 @@ Just as you copied the actions in `CustomActions` to  `C:\Program Files (x86)\DS
 **Note: You need to go to `C:\Windows\System32\drivers\etc` and add the following
 line to your hosts file:**\
 `127.0.0.1 dsgamemaker.com`\
-To do this, you will have to open notepad as admin, then File->Open\
+To do this, you will have to open notepad as admin, then File->Open
 
 ## C++ Code
 To use C++ in your code:
@@ -60,13 +60,15 @@ HELLO MY DUDES
 ## Examples
 Everything in the examples folder is a project for PALib. It is useful to see
 all of the functions available and how it works.\
-To build, double click on `build.bat`\
+To build, double click on `build.bat`
 
 # DSGM Info:
 
 ## Activating
 Assuming everything went well with the installer and the hosts file, you should be able to activate pro mode without any issues!\
-![activation Image](./.ReadMeAssets/activate.png?s=200) \
+![activation Image](./.ReadMeAssets/activate.png) 
+<img src='.ReadMeAssets/activate.png' width='200'>
+
 
 ## Trace
 I added a trace boolean to the project file. When the global variable is set to true, it prints more info!\
