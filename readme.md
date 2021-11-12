@@ -66,7 +66,7 @@ To build, double click on `build.bat`\
 
 ## Activating
 Assuming everything went well with the installer and the hosts file, you should be able to activate pro mode without any issues!\
-![activation Image](./.ReadMeAssets/activate.png) \
+![activation Image](./.ReadMeAssets/activate.png?s=200) \
 
 ## Trace
 I added a trace boolean to the project file. When the global variable is set to true, it prints more info!\
