@@ -66,13 +66,12 @@ To build, double click on `build.bat`
 
 ## Activating
 Assuming everything went well with the installer and the hosts file, you should be able to activate pro mode without any issues!\
-![activation Image](./.ReadMeAssets/activate.png) 
-<img src='.ReadMeAssets/activate.png' width='200'>
+<img src='.ReadMeAssets/activate.png' width='400'>
 
 
 ## Trace
 I added a trace boolean to the project file. When the global variable is set to true, it prints more info!\
-![trace](./.ReadMeAssets/trace.png)
+<img src='.ReadMeAssets/trace.png' width='400'>
 To add trace printing, simply use the following notation: \
 ```c
 if(trace) PA_Print(0,"The value in x is: %d\n",x);// 0 is bottom, 1 is top
@@ -80,5 +79,5 @@ if(trace) PA_Print(0,"The value in x is: %d\n",x);// 0 is bottom, 1 is top
 
 ## A Random Warning
 Don't click this, ever. It is checked by default. \
-![box](./.ReadMeAssets/badbox.png)
+<img src='.ReadMeAssets/badbox.png' width='400'>
 
