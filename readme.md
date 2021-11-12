@@ -60,11 +60,13 @@ HELLO MY DUDES
 ### C++ Example
 The following image may help you understand:
 
-<img src='.ReadMeAssets/cpp1.png' href='.ReadMeAssets/cpp1.png' target='new'>
+<a href=".ReadMeAssets/cpp1.png" target="_blank">
+<img src='.ReadMeAssets/cpp1.png'>
+</a>
 
-The green arrow shows how DSGM automatically pulls the `MyWrapper.h`\
-The blue double box shows the implementation using C++ functions\
-The blue arrows/boxes walk you through how c++ code gets called. \
+- The green arrow shows how DSGM automatically pulls the `MyWrapper.h`
+- The blue double box shows the implementation using C++ functions
+- The blue arrows/boxes walk you through how c++ code gets called. 
 
 ## Examples
 Everything in the examples folder is a project for PALib. It is useful to see
@@ -107,7 +109,9 @@ You define the x and y size of each tile (in pixels) for the level, then refer t
 ## DSGM to C/C++
 This image is your reference for how DSGM compiles to code. 
 
-<img src='.ReadMeAssets/dsgmCode.png'> \
+<a href=".ReadMeAssets/dsgmCode.png" target="_blank">
+<img src='.ReadMeAssets/dsgmCode.png'>
+</a>
 
 - Blue shows you how a trigger for an object becomes a function. 
 - Purple shows you that actions are not translated into functions. Instead, they are "blocks of code" which are dumped into whatever trigger function you are in. They cannot be called using function names. 
@@ -116,11 +120,15 @@ This image is your reference for how DSGM compiles to code.
 ## ToDo List implementation 
 The following screenshots may help you understand how to use DSGM to implement stuff. \
 This code creates a dynamic "To Do list" which will be used for player objectives. \
-This is probably most helpful for understanding structs and global variables \
+This is probably most helpful for understanding structs and global variables 
 ### Backend
 
-<img src='.ReadMeAssets/list2.png'> \
+<a href=".ReadMeAssets/list2.png" target="_blank">
+<img src='.ReadMeAssets/list2.png'>
+</a>
 
 ### Using the ToDo List
 
-<img src='.ReadMeAssets/list.png'> 
+<a href=".ReadMeAssets/list.png" target="_blank">
+<img src='.ReadMeAssets/list.png'>
+</a>
