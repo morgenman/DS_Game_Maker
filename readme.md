@@ -54,6 +54,9 @@ YO
 HELLO MY DUDES
 ```
 
+> Note: This is already inside the startupScript function. 
+> Also, any functions which clear text off the screen called after startupscript will remove this text, since startupscript only runs once
+
 ## Examples
 Everything in the examples folder is a project for PALib. It is useful to see
 all of the functions available and how it works.\
