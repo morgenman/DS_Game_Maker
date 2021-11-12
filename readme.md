@@ -9,13 +9,17 @@
 4. Compile!
 
 ## Working on C++
-Make sure to edit C++ code in the git repository, and copy the updated files to the source folder when you actually build. 
+Make sure to edit C++ code in the git repository, and copy the updated files to the source folder when you actually build. \
 The exception to this is MyWrapper.h
-When changed, you need to reimport it. See the other C++ section below for how
-that works
+When changed, you need to reimport it. See the other C++ section below for how that works.\
+
+## Custom Actions
+Actions are a great way of making it easy for non-CodeMonkeys to use our code!\
+Unfortunately, they do not get saved in the project. \
+Just as you copied the actions in `CustomActions` to  `C:\Program Files (x86)\DS Game Maker\Actions\` when building, you also need to copy new or edited actions from `C:\Program Files (x86)\DS Game Maker\Actions\` to the `CustomActions` folder so other members can use them. 
 
 ## Installer
-**Note: You need to go to C:\Windows\System32\drivers\etc and add the following
+**Note: You need to go to `C:\Windows\System32\drivers\etc` and add the following
 line to your hosts file:**\
 `127.0.0.1 dsgamemaker.com`\
 To do this, you will have to open notepad as admin, then File->Open\
