@@ -64,6 +64,7 @@ if (map) {
         default:
           continue;
       }
+      
       if (altY == 0) altY = spritesize;
       if (color != 0) {
         for (i = 0; i < spritesize; i++) {
