@@ -57,6 +57,15 @@ HELLO MY DUDES
 > Note: This is already inside the startupScript function. 
 > Also, any functions which clear text off the screen called after startupscript will remove this text, since startupscript only runs once
 
+### C++ Example
+The following image may help you understand:
+
+<img src='.ReadMeAssets/cpp1.png' width='400'> \
+
+The green arrow shows how DSGM automatically pulls the `MyWrapper.h`\
+The blue double box shows the implementation using C++ functions\
+The blue arrows/boxes walk you through how c++ code gets called. \
+
 ## Examples
 Everything in the examples folder is a project for PALib. It is useful to see
 all of the functions available and how it works.\
@@ -65,12 +74,13 @@ To build, double click on `build.bat`
 # DSGM Info:
 
 ## Activating
-Assuming everything went well with the installer and the hosts file, you should be able to activate pro mode without any issues!\
+Assuming everything went well with the installer and the hosts file, you should be able to activate pro mode without any issues!
+
 <img src='.ReadMeAssets/activate.png' width='400'>
 
 
 ## Trace
-I added a trace boolean to the project file. When the global variable is set to true, it prints more info!\
+I added a trace boolean to the project file. When the global variable is set to true, it prints more info!
 
 <img src='.ReadMeAssets/trace.png' width='400'> \
 To add trace printing, simply use the following notation: 
@@ -80,6 +90,37 @@ if(trace) PA_Print(0,"The value in x is: %d\n",x);// 0 is bottom, 1 is top
 ```
 
 ## A Random Warning
-Don't click this, ever. It is checked by default. \
+Don't click this, ever. It is checked by default. 
+
 <img src='.ReadMeAssets/badbox.png' width='400'>
 
+## Tiling
+DSGM (and the DS) has two coordinate systems: 
+1. pixel position (relative to the screen)
+2. tile position (relative to the background, which can be much bigger than the screen)
+
+How to change the tile size and see how it maps out is shown in this image:
+
+<img src='.ReadMeAssets/tiling.png'> \
+You define the x and y size of each tile (in pixels) for the level, then refer to them from the top left corner to the bottom right corner.
+
+## DSGM to C/C++
+This image is your reference for how DSGM compiles to code. 
+
+<img src='.ReadMeAssets/dsgmCode.png'> \
+
+- Blue shows you how a trigger for an object becomes a function. 
+- Purple shows you that actions are not translated into functions. Instead, they are "blocks of code" which are dumped into whatever trigger function you are in. They cannot be called using function names. 
+- Green shows how scripts work. Scripts become actual functions, and should be able to be called as functions. I don't know how to set the return type on these, or if that is possible, so we might need to store output in global output variables.
+
+## ToDo List implementation 
+The following screenshots may help you understand how to use DSGM to implement stuff. \
+This code creates a dynamic "To Do list" which will be used for player objectives. \
+This is probably most helpful for understanding structs and global variables \
+### Backend
+
+<img src='.ReadMeAssets/list2.png'> \
+
+### Using the ToDo List
+
+<img src='.ReadMeAssets/list.png'> 
