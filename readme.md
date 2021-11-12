@@ -71,8 +71,10 @@ Assuming everything went well with the installer and the hosts file, you should 
 
 ## Trace
 I added a trace boolean to the project file. When the global variable is set to true, it prints more info!\
-<img src='.ReadMeAssets/trace.png' width='400'>
-To add trace printing, simply use the following notation: \
+
+<img src='.ReadMeAssets/trace.png' width='400'> \
+To add trace printing, simply use the following notation: 
+
 ```c
 if(trace) PA_Print(0,"The value in x is: %d\n",x);// 0 is bottom, 1 is top
 ```
