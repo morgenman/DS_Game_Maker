@@ -8,6 +8,11 @@
 
 4. Compile!
 
+## Documentation
+There is a PDF in this folder with a manual for DSGM.  
+[This link](https://web.archive.org/web/20111130193307/http://www.palib.info/wiki/doku.php?id=homepage) is a copy of the site for PALib, which has some decent tutorials.  
+[A full copy](https://dlhb.gamebrew.org/dshomebrew/palib.7z) of PAlib, including the source code is also available. Examples are very useful. 
+
 ## Working on C++
 Make sure to edit C++ code in the git repository, and copy the updated files to the source folder when you actually build. \
 The exception to this is MyWrapper.h
